@@ -1,0 +1,10 @@
+@layer components {
+  .card {
+    @apply p-6 border border-gray-200 rounded-lg transition-colors;
+  }
+  .card:hover,
+  .card:focus,
+  .card:active {
+    @apply border-blue-600 text-blue-600;
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "nextjs-production-grade-exercise",
+  "description": "Production Grade Next.js exercise",
+  "version": "1.0.0",
+  "author": "Cuong Duy Phan",
+  "license": "MIT",
+  "repository": "https://github.com/cuongdphan/nextjs-production-grade-exercise",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "0.4.1",
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.14",
+    "@typescript-eslint/eslint-plugin": "4.28.4",
+    "autoprefixer": "10.3.1",
+    "eslint": "7.31.0",
+    "eslint-config-next": "11.0.1",
+    "eslint-config-prettier": "8.3.0",
+    "postcss": "8.3.6",
+    "postcss-import": "14.0.2",
+    "tailwindcss": "2.2.7",
+    "typescript": "4.3.5"
+  }
+}
