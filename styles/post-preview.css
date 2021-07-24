@@ -1,0 +1,14 @@
+@layer components {
+  button {
+    @apply h-12 p-6 rounded cursor-pointer inline-flex items-center text-green-700  font-medium;
+  }
+  button:hover {
+    @apply bg-gray-500 bg-opacity-10;
+  }
+  button:active {
+    @apply bg-blue-600 bg-opacity-10;
+  }
+  button:focus {
+    @apply ring ring-blue-600 ring-opacity-30;
+  }
+}

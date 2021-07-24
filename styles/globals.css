@@ -1,16 +1,14 @@
-@import "./card.css";
+@import "./post-preview.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  h1 {
-    @apply text-6xl font-bold;
-  }
   h2 {
-    @apply text-2xl font-semibold;
+    @apply text-5xl font-medium text-gray-700;
   }
-  p {
-    @apply text-xl;
+  p,
+  span {
+    @apply text-gray-600;
   }
 }
