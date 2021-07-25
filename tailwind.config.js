@@ -13,7 +13,7 @@ module.exports = {
       center: true,
     },
     fontFamily: {
-      sans: ["Arial", ...defaultTheme.fontFamily.sans],
+      sans: ["'Noto Sans'", ...defaultTheme.fontFamily.sans],
     },
     extend: {},
   },

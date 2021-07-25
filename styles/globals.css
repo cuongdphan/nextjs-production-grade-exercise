@@ -1,11 +1,12 @@
-@import "./post-preview.css";
+@import "./components/post-preview.css";
+@import "./pages/blog.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   h2 {
-    @apply text-5xl font-medium text-gray-700;
+    @apply text-5xl font-medium text-gray-700 sm:text-8xl;
   }
   p,
   span {

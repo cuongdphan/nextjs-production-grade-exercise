@@ -2,7 +2,7 @@ import FeatureSection from "components/FeatureSection";
 import Hero from "components/Hero";
 import HomeNav from "components/HomeNav";
 import { home } from "content";
-import { FC } from "react";
+import type { FC } from "react";
 
 const Home: FC<{ content: { hero: any; features: any[] } }> = ({ content }) => {
   return (
@@ -19,7 +19,7 @@ const Home: FC<{ content: { hero: any; features: any[] } }> = ({ content }) => {
             title={feature.title}
             body={feature.body}
             image="/docs.png"
-            invert={i % 2 == 0}
+            invert={i % 2 === 0}
           />
         ))}
       </main>

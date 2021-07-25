@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FC } from "react";
+import type { FC } from "react";
 
 const PostPreview: FC<{
   post: { title: string; summary: string; slug: string };

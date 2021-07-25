@@ -1,0 +1,5 @@
+@layer components {
+  .blog {
+    @apply container py-10;
+  }
+}

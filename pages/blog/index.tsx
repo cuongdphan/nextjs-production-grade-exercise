@@ -3,17 +3,18 @@ import PostPreview from "components/PostPreview";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
-import { FC } from "react";
+import type { FC } from "react";
+import type { PostFrontMatter } from "types";
 import { posts as postsFromCMS } from "../../content";
 
-const Blog: FC<{ posts: any[] }> = ({ posts }) => {
+const Blog: FC<{ posts: PostFrontMatter[] }> = ({ posts }) => {
   return (
     <>
       <header>
         <HomeNav />
       </header>
 
-      <main className="container py-10 space-y-10">
+      <main className="blog space-y-10">
         {posts.map((post) => (
           <PostPreview key={post.title} post={post} />
         ))}
