@@ -1,4 +1,5 @@
 import type { MDXRemoteSerializeResult } from "next-mdx-remote";
+import { ParsedUrlQuery } from "querystring";
 
 export interface PostFrontMatter {
   title: string;
@@ -11,4 +12,12 @@ export interface PostFrontMatter {
 export interface Post {
   source: MDXRemoteSerializeResult;
   frontMatter: PostFrontMatter;
+}
+
+export interface Params extends ParsedUrlQuery {
+  slug: string;
+}
+
+export interface Query {
+  [key: string]: string;
 }

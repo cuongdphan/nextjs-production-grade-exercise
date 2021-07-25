@@ -1,5 +1,5 @@
 @layer components {
-  .blog {
+  .content-area {
     @apply container py-10;
   }
 }

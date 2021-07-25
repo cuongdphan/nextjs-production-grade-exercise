@@ -2,6 +2,12 @@
 
 # Production Grade Next.js exercise
 
+Features
+
+- **Dynamic content / Static route / Static page**
+- **Dynamic content / Dynamic route / Static page**
+- **Try before you buy**
+
 ## Getting Started
 
 First, run the development server:

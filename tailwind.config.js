@@ -1,19 +1,15 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
-  purge: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./styles/*.css",
-  ],
-  darkMode: false, // or 'media' or 'class'
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  darkMode: false,
   theme: {
     container: {
       center: true,
     },
     fontFamily: {
-      sans: ["'Noto Sans'", ...defaultTheme.fontFamily.sans],
+      sans: ["'Exo 2'", ...fontFamily.sans],
     },
     extend: {},
   },

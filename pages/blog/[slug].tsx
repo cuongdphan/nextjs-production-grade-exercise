@@ -1,39 +1,34 @@
 import HomeNav from "components/HomeNav";
-import { posts } from "content";
+import { posts as postsFromCMS } from "content";
 import fs from "fs";
 import matter from "gray-matter";
+import { GetStaticProps } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import Head from "next/head";
 import path from "path";
 import type { FC } from "react";
-import type { Post } from "types";
+import type { Params, Post } from "types";
 
-type Params = {
-  [param: string]: any;
-};
+const BlogPost: FC<Post> = ({ source, frontMatter }) => (
+  <>
+    <Head>
+      <title>{`Known Blog | ${frontMatter.title}`}</title>
+      <meta name="description" content={frontMatter.summary} />
+    </Head>
 
-const BlogPost: FC<Post> = ({ source, frontMatter }) => {
-  return (
-    <>
-      <Head>
-        <title>{`Known Blog | ${frontMatter.title}`}</title>
-        <meta name="description" content={frontMatter.summary} />
-      </Head>
+    <header>
+      <HomeNav />
+    </header>
 
-      <header>
-        <HomeNav />
-      </header>
-
-      <main className="blog">
-        <h2 className="mb-6">{frontMatter.title}</h2>
-        <div className="py-10 border-t-2 border-gray-700 prose prose-lg max-w-none">
-          <MDXRemote {...source} />
-        </div>
-      </main>
-    </>
-  );
-};
+    <main className="content-area">
+      <h2 className="mb-6">{frontMatter.title}</h2>
+      <div className="pt-16 border-t-2 border-gray-700 prose prose-lg max-w-none">
+        <MDXRemote {...source} />
+      </div>
+    </main>
+  </>
+);
 
 export function getStaticPaths() {
   const postsPath = path.resolve("posts");
@@ -42,6 +37,7 @@ export function getStaticPaths() {
     const filePath = path.join("posts", name);
     const file = fs.readFileSync(filePath, "utf-8");
     const { data } = matter(file);
+
     return data;
   });
 
@@ -51,18 +47,19 @@ export function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }: Params) {
+export const getStaticProps: GetStaticProps = async ({ params, preview }) => {
+  const { slug } = params as Params;
   let post;
 
   try {
-    const filesPath = path.resolve("posts", `${params.slug}.mdx`);
+    const filesPath = path.resolve("posts", `${slug}.mdx`);
 
     post = fs.readFileSync(filesPath, "utf-8");
   } catch {
-    const cmsPosts = posts.published.map((p) => {
-      return matter(p);
-    });
-    const match = cmsPosts.find((p) => p.data.slug === params.slug);
+    const cmsPosts = (
+      preview ? postsFromCMS.draft : postsFromCMS.published
+    ).map((p) => matter(p));
+    const match = cmsPosts.find((p) => p.data.slug === slug);
 
     if (match) {
       post = matter.stringify(match.content, match.data);
@@ -78,6 +75,6 @@ export async function getStaticProps({ params }: Params) {
       frontMatter: data,
     },
   };
-}
+};
 
 export default BlogPost;

@@ -1,6 +1,6 @@
 @layer components {
   button {
-    @apply h-12 p-6 rounded cursor-pointer inline-flex items-center text-green-700  font-medium;
+    @apply h-12 p-6 rounded cursor-pointer inline-flex items-center text-green-700 font-medium;
   }
   button:hover {
     @apply bg-gray-500 bg-opacity-10;
