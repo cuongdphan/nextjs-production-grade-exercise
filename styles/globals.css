@@ -1,4 +1,5 @@
 @import "./components/post-preview.css";
+@import "./components/home-nav.css";
 @import "./pages/blog.css";
 
 @tailwind base;

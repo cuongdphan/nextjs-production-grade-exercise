@@ -2,11 +2,13 @@
 
 # Production Grade Next.js exercise
 
-Features
+> inspired by scott moss and frontendmasters
 
-- **Dynamic content / Static route / Static page**
-- **Dynamic content / Dynamic route / Static page**
-- **Try before you buy**
+**Features**
+
+- Dynamic content / Static routes / Static pages
+- Dynamic content / Dynamic routes / Static pages
+- Preview Mode
 
 ## Getting Started
 

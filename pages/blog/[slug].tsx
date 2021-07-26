@@ -34,7 +34,7 @@ export function getStaticPaths() {
   const postsPath = path.resolve("posts");
   const filenames = fs.readdirSync(postsPath);
   const slugs = filenames.map((name) => {
-    const filePath = path.join("posts", name);
+    const filePath = path.resolve("posts", name);
     const file = fs.readFileSync(filePath, "utf-8");
     const { data } = matter(file);
 

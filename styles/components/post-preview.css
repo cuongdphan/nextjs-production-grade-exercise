@@ -1,14 +1,14 @@
 @layer components {
-  button {
-    @apply h-12 p-6 rounded cursor-pointer inline-flex items-center text-green-700 font-medium;
+  .read-button {
+    @apply h-12 p-6 rounded inline-flex items-center text-green-700 font-medium;
   }
-  button:hover {
+  .read-button:hover {
     @apply bg-gray-500 bg-opacity-10;
   }
-  button:active {
+  .read-button:active {
     @apply bg-blue-600 bg-opacity-10;
   }
-  button:focus {
+  .read-button:focus {
     @apply ring ring-blue-600 ring-opacity-30;
   }
 }

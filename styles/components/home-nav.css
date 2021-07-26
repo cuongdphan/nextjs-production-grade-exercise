@@ -1,0 +1,14 @@
+@layer components {
+  .signup-button {
+    @apply h-8 px-4 text-white font-medium rounded inline-flex items-center bg-gradient-to-b from-blue-400 to-blue-500;
+  }
+  .signup-button:hover {
+    @apply bg-gradient-to-b from-blue-500 to-blue-600;
+  }
+  .signup-button:active {
+    @apply bg-gradient-to-b from-blue-700 to-blue-700;
+  }
+  .signup-button:focus {
+    @apply ring ring-blue-700 ring-opacity-30;
+  }
+}
