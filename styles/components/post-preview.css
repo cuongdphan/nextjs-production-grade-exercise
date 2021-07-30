@@ -5,10 +5,10 @@
   .read-button:hover {
     @apply bg-gray-500 bg-opacity-10;
   }
-  .read-button:active {
-    @apply bg-blue-600 bg-opacity-10;
-  }
   .read-button:focus {
     @apply ring ring-blue-600 ring-opacity-30;
+  }
+  .read-button:active {
+    @apply bg-blue-600 bg-opacity-10;
   }
 }

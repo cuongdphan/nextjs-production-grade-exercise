@@ -21,3 +21,10 @@ export interface Params extends ParsedUrlQuery {
 export interface Query {
   [key: string]: string;
 }
+
+export interface UserSession {
+  id: string;
+  image: string;
+  email: string;
+  name: string;
+}

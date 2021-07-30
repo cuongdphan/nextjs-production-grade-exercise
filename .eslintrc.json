@@ -9,6 +9,10 @@
   ],
   "rules": {
     "no-console": "warn",
+    "import/no-anonymous-default-export": [
+      "error",
+      { "allowArrowFunction": true }
+    ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "@typescript-eslint/no-var-requires": "off",

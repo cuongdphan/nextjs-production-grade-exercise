@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import GithubIcon from "./GithubIcon";
 
 const icons: { [key: string]: () => JSX.Element } = { github: GithubIcon };
@@ -10,10 +10,13 @@ const SocialButton: FC<{
 
   return (
     <div className="w-full text-center">
-      <button className="w-full max-w-xs rounded px-4 py-3 bg-gray-900 ring-1 ring-gray-200 ring-opacity-80">
-        <div className="flex justify-evenly items-center text-xl">
+      <button
+        className="w-full max-w-xs rounded px-4 py-3 bg-gray-900 ring-1 ring-gray-200 ring-opacity-80"
+        onClick={onClick}
+      >
+        <div className="flex justify-evenly items-center">
           <Icon />
-          <span className="text-white">
+          <span className="text-white text-xl">
             {"Continue with "}
             <strong>{type}</strong>
           </span>

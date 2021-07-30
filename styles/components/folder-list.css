@@ -1,0 +1,14 @@
+@layer components {
+  .nav-item {
+    @apply h-10 w-full pl-4 flex items-center space-x-4;
+  }
+  .nav-item:hover {
+    @apply bg-gray-500 bg-opacity-5;
+  }
+  .nav-item:focus {
+    @apply bg-blue-600 bg-opacity-5;
+  }
+  .nav-item:active {
+    @apply bg-blue-600 bg-opacity-10;
+  }
+}
