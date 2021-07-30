@@ -55,7 +55,7 @@ const User: FC<{ user: UserSession }> = ({ user }) => {
                         active && "bg-gray-100",
                         "block w-full text-left px-4 py-2 text-sm text-red-600"
                       )}
-                      onClick={signOut}
+                      onClick={() => signOut()}
                     >
                       Sign out
                     </button>
