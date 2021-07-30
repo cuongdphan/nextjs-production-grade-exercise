@@ -8,7 +8,7 @@ import { getSession, useSession } from "next-auth/client";
 import { useState } from "react";
 
 const App = () => {
-  const [session, loading] = useSession();
+  const [session, loading]: [session: any, loading: boolean] = useSession();
   const [newFolderIsShown, setIsShown] = useState(false);
 
   if (loading) {
